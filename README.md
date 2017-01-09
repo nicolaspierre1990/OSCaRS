@@ -17,3 +17,7 @@ Features will include:
 # OSCaRS - Hardware
 
 In a later stage of this project I will also look at the possibilty to provide hardware solutions with different solutions as Arduino or RaspBerry PI
+
+# README
+
+Please read the README files in the respective directory for more information
