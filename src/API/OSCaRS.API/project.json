@@ -19,13 +19,30 @@
       "type": "platform"
     },
     "OSCaRS.Domain": "1.0.0-*",
-    "Swashbuckle": "6.0.0-beta902"
+    "Swashbuckle": "6.0.0-beta902",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "type": "build",
+      "version": "1.0.0-preview2-final"
+    },
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
+      "version": "1.0.0-preview2-final",
+      "type": "build"
+    },
+    "OSCaRS.Repositories": "1.0.0-*",
+    "OSCaRS.Extensions": "1.0.0-*"
   },
 
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final",
     "Microsoft.EntityFrameworkCore.Tools.DotNet": "1.0.0-preview3-final",
-    "Microsoft.Extensions.SecretManager.Tools": "1.0.0-preview2-final"
+    "Microsoft.Extensions.SecretManager.Tools": "1.0.0-preview2-final",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "imports": [
+        "portable-net45+win8+dnxcore50",
+        "portable-net45+win8"
+      ],
+      "version": "1.0.0-preview2-final"
+    }
   },
 
   "frameworks": {
