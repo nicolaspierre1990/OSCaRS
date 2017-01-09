@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OSCaRS.Domain.Model;
 
 namespace OSCaRS.Domain.Context
 {
