@@ -15,7 +15,7 @@ namespace OSCaRS.Core.Repository
             DbSet = context.Set<T>();
         }
 
-        public virtual void Add(T entity)
+        public void Add(T entity)
         {
             Context.Set<T>().Add(entity);
 

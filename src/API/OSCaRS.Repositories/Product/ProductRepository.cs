@@ -1,4 +1,5 @@
-﻿using OSCaRS.Core.Repository;
+﻿using OSCaRS.Core.Models;
+using OSCaRS.Core.Repository;
 using OSCaRS.Domain.Context;
 using OSCaRS.Domain.Model;
 
@@ -10,9 +11,9 @@ namespace OSCaRS.Repositories.Product
         {
         }
 
-        public override void Add(Domain.Model.Product entity)
+        public OSCaRSModel Add(string shortDesc, string desc, decimal basePrice)
         {
-            base.Add(entity);
+            return new OSCaRSModel("Empty Parameters", System.Net.HttpStatusCode.BadRequest);
         }
     }
 }
