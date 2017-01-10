@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{758BE74A-C75F-4F3D-8C80-028346E5CD2B}</ProjectGuid>
+    <ProjectGuid>{4F70907E-DDE9-4D20-B015-C3411D01CC6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OSCaRS.Test</RootNamespace>
