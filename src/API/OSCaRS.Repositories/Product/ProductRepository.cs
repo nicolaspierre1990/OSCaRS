@@ -2,6 +2,7 @@
 using OSCaRS.Core.Repository;
 using OSCaRS.Domain.Context;
 using OSCaRS.Domain.Model;
+using System.Threading.Tasks;
 
 namespace OSCaRS.Repositories.Product
 {
@@ -11,7 +12,7 @@ namespace OSCaRS.Repositories.Product
         {
         }
 
-        public OSCaRSModel Add(string shortDesc, string desc, decimal basePrice)
+        public async Task<OSCaRSModel> Add(string shortDesc, string desc, decimal basePrice)
         {
             return new OSCaRSModel("Empty Parameters", System.Net.HttpStatusCode.BadRequest);
         }

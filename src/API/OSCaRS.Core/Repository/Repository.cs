@@ -15,9 +15,9 @@ namespace OSCaRS.Core.Repository
             DbSet = context.Set<T>();
         }
 
-        public void Add(T entity)
+        public async void Add(T entity)
         {
-            Context.Set<T>().Add(entity);
+            await Context.Set<T>().AddAsync(entity);
 
             Save();
         }
@@ -37,9 +37,9 @@ namespace OSCaRS.Core.Repository
             Save();
         }
 
-        private void Save()
+        private async void Save()
         {
-            Context.SaveChanges();
+            await Context.SaveChangesAsync();
         }
     }
 }

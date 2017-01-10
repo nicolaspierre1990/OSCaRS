@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using OSCaRS.Base.Entity;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace OSCaRS.Core.Models
 {
     public class OSCaRSModel
     {
-        private string empty;
-        private HttpStatusCode oK;
+        public string ErrorMessage { get; set; }
+        public HttpStatusCode StatusCode { get; set; }
+        public EntityBase Entity { get; set; }
 
-        public OSCaRSModel(string empty, HttpStatusCode oK)
+        public OSCaRSModel(string errorMessage, HttpStatusCode statusCode)
         {
-            this.empty = empty;
-            this.oK = oK;
+            this.ErrorMessage = errorMessage;
+            this.StatusCode = statusCode;
         }
     }
 }
