@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/3p84vx3b03cixlu1?svg=true)](https://ci.appveyor.com/project/nicolaspierre1990/oscars)
+
 # OSCaRS - Open Source Cash Register System
 
 Project Description
