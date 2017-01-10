@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 
 namespace OSCaRS.Interfaces.Repository
 {
@@ -6,7 +7,7 @@ namespace OSCaRS.Interfaces.Repository
     {
         T Get<TKey>(TKey id);
         IQueryable<T> GetAll();
-        void Add(T entity);
-        void Update(T entity);
+        Task Add(T entity);
+        Task Update(T entity);
     }
 }

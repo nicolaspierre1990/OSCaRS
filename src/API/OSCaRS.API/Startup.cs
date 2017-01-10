@@ -18,7 +18,7 @@ namespace OSCaRS.API
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
-            if(env.IsDevelopment())
+            if(env.IsDevelopment() && builder.GetFileProvider().GetFileInfo("project.json").Exists)
             {
                 builder.AddUserSecrets();
             }
@@ -45,6 +45,18 @@ namespace OSCaRS.API
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            app.UseStaticFiles();
 
             app.UseMvc();
             app.UseSwagger();

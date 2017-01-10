@@ -11,6 +11,7 @@ using OSCaRS.Core.Models;
 using System.Net;
 using OSCaRS.Domain.Model;
 using OSCaRS.Interfaces.Context;
+using OSCaRS.Core.Models.ControllerViewModels;
 
 namespace OSCaRS.API.Controllers
 {
@@ -41,9 +42,11 @@ namespace OSCaRS.API.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(Product), 201)]
         [ProducesResponseType(typeof(Product), 400)]
-        public async Task<ActionResult> AddProduct(string shortDesc, string desc, decimal basePrice)
+        public async Task<ActionResult> AddProduct([FromBody]AddProductViewModel addProductViewModel)
         {
-            OSCaRSModel result = await productRepository.Add(shortDesc, desc, basePrice);
+            var t = this.Request;
+
+            OSCaRSModel result = await productRepository.Add(addProductViewModel.ShortDesc, addProductViewModel.Description, addProductViewModel.BasePrice);
             Product createdProduct = (Product)result.Entity;
 
             if (result != null)

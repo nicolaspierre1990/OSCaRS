@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OSCaRS.Interfaces.Repository;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace OSCaRS.Core.Repository
 {
@@ -15,11 +16,10 @@ namespace OSCaRS.Core.Repository
             DbSet = context.Set<T>();
         }
 
-        public async void Add(T entity)
+        public async Task Add(T entity)
         {
             await Context.Set<T>().AddAsync(entity);
-
-            Save();
+            await Save();
         }
 
         public T Get<TKey>(TKey id)
@@ -32,12 +32,12 @@ namespace OSCaRS.Core.Repository
             return DbSet;
         }
 
-        public void Update(T entity)
+        public async Task Update(T entity)
         {
-            Save();
+            await Save();
         }
 
-        private async void Save()
+        private async Task Save()
         {
             await Context.SaveChangesAsync();
         }
