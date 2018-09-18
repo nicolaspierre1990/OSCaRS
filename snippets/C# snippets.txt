@@ -1,5 +1,0 @@
-//C# 6 way for string format
-catch (Exception ex)
-{
-     Debug.WriteLine($"Exception: {ex.Message}, InnerException {(ex.InnerException != null ? ex.InnerException.Message : string.Empty)}");
-}
